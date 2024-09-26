@@ -1,0 +1,152 @@
+.navbar {
+    position: fixed; /* Hace que la navbar se mantenga en su lugar */
+    top: 0; /* La coloca en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+body, html {
+    margin: 0;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: url("./images/cursor.png"), auto;
+    background-color: color-mix(in srgb-linear, slategrey 40%, black 60%) ;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.nav-link, .navbar-brand, .dropdown-item, .carousel-control-next-icon, .carousel-control-prev-icon {
+    cursor: url("./images/cursorhover.png"), auto;
+}
+
+.carousel-item {
+    min-height: 100vh; 
+}
+
+.carousel-item img {
+    width: 100%;           
+    height: 100vh;       
+    object-fit: cover;      
+    display: block;          
+}
+
+.container-fluid {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+.carousel-caption {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    text-shadow: 2px 1px 0px black;  
+}
+
+.row {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 35px 10px;
+    width: 100%; /* La anchura del elemento se ajusta al 100% del contenedor */
+    max-width: 1300px; /* Limita el tamaño máximo */
+    margin: 0 auto; /* Centra el contenido */    
+}
+
+.text-center {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: aliceblue;
+    margin: 30px auto;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    /* Animación de aparición */
+    opacity: 0; /* Iniciar invisible */
+    transform: translateY(50px); /* Iniciar ligeramente abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    animation: slideIn 1s forwards ease-out; /* Ejecutar animación al cargar */
+    animation-delay: 0.2s; /* Añadir un pequeño retraso */
+}
+
+/* Animación de las cartas */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Subir a su posición final */
+    }
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Agrega una sombra más pronunciada */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px; /* Bordes de imagen redondeados */
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    transition: color 0.3s ease;
+}
+
+.card-title:hover {
+    color: #ff4081; /* Cambia el color del título en hover */
+}
+
+.card-text {
+    opacity: 0.8; /* Un poco transparente */
+    transition: opacity 0.3s ease;
+}
+
+.card-text:hover {
+    opacity: 1; /* Se vuelve más visible en hover */
+}
+
+section {
+    display: flex;
+  }
+
+.td {
+    padding: px; /* Ajusta este valor según sea necesario */
+}
+.card {
+    min-height: 510px; /* Ajusta esto para que todas tengan al menos esta altura */
+    max-height: 400px; /* Esto asegura que no crezcan demasiado */
+    max-width: 27rem; /* Asegúrate de que las tarjetas mantengan el mismo ancho */
+    margin: 10px; /* Espaciado entre tarjetas */
+    overflow: hidden; /* Ocultar contenido que exceda la tarjeta */
+    display: flex; /* Permitir el uso de flexbox */
+    flex-direction: column; /* Organizar los elementos en columnas */
+}
+
+.card-body {
+    flex: 1; /* Permitir que el cuerpo de la tarjeta ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Organizar el contenido en columnas */
+
+}
+
+.bienestar-list {
+    color: #6c757d; /* Cambia este valor por el color que prefieras */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
